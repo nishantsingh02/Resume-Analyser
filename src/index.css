@@ -21,11 +21,16 @@ html,
 body {
   background-color: white;
   font-family: var(--font-sans);
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 main {
   min-height: 100vh;
   padding-top: 2.5rem; /* pt-10 */
+  
 }
 
 h1 {
@@ -375,6 +380,9 @@ form {
   }
 }
 
+.fade-in {
+  animation: fadeIn 1s ease-in forwards;
+}
 
 
 

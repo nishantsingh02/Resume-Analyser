@@ -1,15 +1,23 @@
-import { useState } from 'react'
-import './App.css'
+import "./App.css";
+import Home from "./Component/Home";
+import Auth from "./Component/Auth";
+import { Route, Routes } from "react-router-dom";
+import { usePuterStore } from "./lib/puter";
+import { useEffect } from "react";
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const { init } = usePuterStore()
+  useEffect(() => {
+    init();
+  }, [init])
 
   return (
-    <>
-    <div className='text-4xl'>hello</div>
-      hi there
-    </>
-  )
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/auth" element={<Auth />} />
+    </Routes>
+  );
 }
 
-export default App
+export default App;
