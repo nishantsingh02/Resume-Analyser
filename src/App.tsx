@@ -4,6 +4,7 @@ import Auth from "./Component/Auth";
 import { Route, Routes } from "react-router-dom";
 import { usePuterStore } from "./lib/puter";
 import { useEffect } from "react";
+import Upload from "./Component/Upload";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/auth" element={<Auth />} />
+      <Route path="/upload" element={<Upload />} />
     </Routes>
   );
 }
